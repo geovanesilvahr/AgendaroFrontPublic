@@ -1,6 +1,6 @@
 # 📅 Agendaro – Frontend
 
-![Tela Principal - Home](assets/img/home_agendaro.jpg)
+![Tela Principal - Home](src/assets/img/home_agendaro.jpg)
 
 Este repositório apresenta a interface web do projeto **Agendaro**, uma aplicação SAAS desenvolvida para facilitar o gerenciamento de agendamentos entre empresas prestadoras de serviço e seus clientes.
 
@@ -45,7 +45,7 @@ src/
 ├── environments/
 └── index.html
 ``` 
-![Tela de Login - Home](assets/img/login_agendaro.jpg)
+![Tela de Login - Home](src/assets/img/login_agendaro.jpg)
 
 ## 🔗 Deploy
 
