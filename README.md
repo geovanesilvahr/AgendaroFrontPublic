@@ -28,7 +28,6 @@ Este projeto representa o **frontend** do sistema Agendaro, contendo a interface
 - Responsividade (Mobile First)
 - Componentização reutilizável
 - Comunicação com API REST
-- Deploy em Firebase Hosting
 - Clean Code e versionamento com Git
 
 ## 📁 Estrutura do Projeto
