@@ -1,0 +1,51 @@
+<div class="register-container">
+    <div class="register-header">
+        <h2>Cadastro da Empresa</h2>
+        <p class="text-muted">Preencha os dados abaixo para criar sua conta.</p>
+    </div>
+
+    <form [formGroup]="businessForm" (ngSubmit)="onSubmit()">
+
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="email@empresa.com"
+                    value="geovanesilva@gmail.com">
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Senha</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Digite sua senha"
+                    value="123123123">
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" formControlName="username"
+                    placeholder="Digite seu nome completo" value="Geovane Silva">
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Nome da Empresa</label>
+                <input type="text" class="form-control" formControlName="businessName" placeholder="Ex: Droxtech"
+                    value="Droxtech">
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Telefone</label>
+                <input type="text" class="form-control" formControlName="phone" placeholder="(XX) XXXXX-XXXX"
+                    value="(11) 91234-5678">
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 mt-4" [disabled]="businessForm.invalid">
+            Cadastrar
+        </button>
+    </form>
+
+    <p class="text-center mt-3">Já tem uma conta?
+        <a href="/login">Faça Login</a>
+    <p class="text-center mt-3">Já tem uma conta? <a routerLink="/login">Faça login</a>
+    </p>
+</div>

@@ -1,0 +1,531 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Title -->
+	<title>Agendaro - Sua Agenda Online!</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="/assets/img/logo.png">
+
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+		rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<!-- Nice Select CSS -->
+	<link rel="stylesheet" href="/assets/css/nice-select.css">
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+	<!-- icofont CSS -->
+	<link rel="stylesheet" href="/assets/css/icofont.css">
+	<!-- Slicknav -->
+	<link rel="stylesheet" href="/assets/css/slicknav.min.css">
+	<!-- Owl Carousel CSS -->
+	<link rel="stylesheet" href="/assets/css/owl-carousel.css">
+	<!-- Datepicker CSS -->
+	<link rel="stylesheet" href="/assets/css/datepicker.css">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="/assets/css/animate.min.css">
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+
+	<!-- Medipro CSS -->
+	<link rel="stylesheet" href="/assets/css/normalize.css">
+	<link rel="stylesheet" href="/assets/style.css">
+	<link rel="stylesheet" href="/assets/css/responsive.css">
+
+</head>
+
+<body>
+	<!--
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        -->
+
+	<!-- Header Area -->
+	<header class="header">
+		<!-- Header Inner -->
+		<div class="header-inner">
+			<div class="container">
+				<div class="inner">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-12">
+							<!-- Start Logo -->
+							<div class="logo">
+								<a href="index"><img src="/assets/img/logo.png" alt="#"></a>
+							</div>
+							<!-- End Logo -->
+							<!-- Mobile Nav -->
+							<div class="mobile-nav"></div>
+							<!-- End Mobile Nav -->
+						</div>
+						<div class="col-lg-7 col-md-9 col-12">
+							<!-- Main Menu -->
+							<div class="main-menu">
+								<nav class="navigation">
+									<ul class="nav menu">
+										<li class="active"><a href="#">inicio</a></li>
+										<li><a href="#">Sobre</a></li>
+										<li><a href="#">Parceiros</a></li>
+										<li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+											<ul class="dropdown">
+												<li><a href="blog-single.html">Blog Details</a></li>
+											</ul>
+										</li>
+										<li><a href="contact.html">Ajuda</a></li>
+									</ul>
+								</nav>
+							</div>
+							<!--/ End Main Menu -->
+						</div>
+						<div class="col-lg-2 col-12">
+							<div class="get-quote">
+								<a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page"
+									class="btn">Minha conta</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Header Inner -->
+	</header>
+	<router-outlet />
+	<!-- End Header Area -->
+	<!-- Slider Area -->
+	<section class="slider">
+		<div class="hero-slider">
+			<!-- Start Single Slider -->
+			<div class="single-slider" style="background-image:url('/assets/img/49055.jpg')">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7">
+							<div class="text">
+								<h1><span>Simplifique </span>sua rotina com agendamentos fáceis e rápidos e no <span>seu
+										tempo!</span></h1>
+								<div class="button">
+									<a href="/register/business" class="btn">Começar</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Single Slider -->
+		</div>
+	</section>
+	<!--/ End Slider Area -->
+
+	<section class="schedule">
+		<div class="container">
+			<div class="schedule-inner">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12 ">
+
+						<div class="single-schedule first">
+							<div class="inner">
+								<div class="icon">
+									<i class="icofont-ui-calendar"></i>
+								</div>
+								<div class="single-content">
+									<h4>Agenda Personaliza</h4>
+									<p>Tenha controle total sobre seus compromissos com uma agenda feita para você.</p>
+									<a href="#">SAIBA MAIS<i class="fa fa-long-arrow-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<div class="single-schedule middle">
+							<div class="inner">
+								<div class="icon">
+									<i class="icofont-prescription"></i>
+								</div>
+								<div class="single-content">
+									<h4>Lista de Clientes</h4>
+									<p>Mantenha seus clientes organizados em um só lugar. Informações, históricos e
+										agendamentos rapidamente.</p>
+									<a href="#">SAIBA MAIS<i class="fa fa-long-arrow-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-schedule last">
+							<div class="inner">
+								<div class="icon">
+									<i class="icofont-ui-clock"></i>
+								</div>
+								<div class="single-content">
+									<h4>Exiba seus horários</h4>
+									<p>Disponibilize sua agenda para clientes de forma clara e profissional. Simples,
+										rápido e em tempo real.</p>
+									<a href="#">SAIBA MAIS<i class="fa fa-long-arrow-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Start Feautes -->
+	<section class="Feautes section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title">
+						<h2>Conectando você aos seus clientes em poucos cliques.</h2>
+						<p>Personalize horários e serviços para atender às suas necessidades.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-12">
+					<!-- Start Single features -->
+					<div class="single-features">
+						<div class="signle-icon">
+							<i class="icofont-user-alt-3"></i>
+						</div>
+						<h3>Crie sua conta</h3>
+						<p>Rápido, fácil e seguro: cadastre-se gratuítamente</p>
+					</div>
+					<!-- End Single features -->
+				</div>
+				<div class="col-lg-4 col-12">
+					<!-- Start Single features -->
+					<div class="single-features">
+						<div class="signle-icon">
+							<i class="icofont-settings"></i>
+						</div>
+						<h3>Configure sua agenda</h3>
+						<p>Personalize sua agenda, seus horários e serviços.</p>
+					</div>
+					<!-- End Single features -->
+				</div>
+				<div class="col-lg-4 col-12">
+					<!-- Start Single features -->
+					<div class="single-features last">
+						<div class="signle-icon">
+							<i class="icofont-ui-calendar"></i>
+						</div>
+						<h3>Começe a agendar</h3>
+						<p>Seus clientes mais próximos de você, sem dificuldades.</p>
+					</div>
+					<!-- End Single features -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/ End Feautes -->
+
+	<!-- Start Call to action -->
+	<section class="call-action overlay" data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-12">
+					<div class="content">
+						<h2>O sistema que você precisa para seus agendamentos</h2>
+						<p>Não precisa mais ligar para agendar ou ser agendado... venha ser um parceiro Agendaro!</p>
+						<div class="button">
+							<a href="#" class="btn">Sou cliente</a>
+							<a href="#" class="btn second">Sou Empresa</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/ End Call to action -->
+
+	<!-- Start service -->
+	<section class="services section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title">
+						<h2>Não somos uma <strong>simples</strong> agenda...</h2>
+						<p>Conheça mais as nossas funcionalidades que você pode usar em nossa plataforma:</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="icofont-ui-calendar"></i>
+						<h4><a href="service-details.html">Gestão de Agendamentos</a></h4>
+						<p>Organize seus compromissos de forma prática e eficiente, com notificações automáticas.</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="icofont-users-alt-5"></i>
+						<h4><a href="service-details.html">Cadastro de Clientes</a></h4>
+						<p>Armazene informações importantes de seus clientes para facilitar o atendimento.</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="icofont-business-man"></i>
+						<h4><a href="service-details.html">Gerenciamento de Equipe</a></h4>
+						<p>Adicione e gerencie os horários e serviços oferecidos por seus colaboradores.</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="icofont-ui-clock"></i>
+						<h4><a href="service-details.html">Horários Disponíveis</a></h4>
+						<p>Exiba horários disponíveis para seus clientes de forma clara e intuitiva.</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="icofont-chart-bar-graph"></i>
+						<h4><a href="service-details.html">Relatórios e Estatísticas</a></h4>
+						<p>Acompanhe o desempenho do seu negócio com relatórios detalhados.</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="icofont-live-support"></i>
+						<h4><a href="service-details.html">Suporte Dedicado</a></h4>
+						<p>Conte com uma equipe de suporte pronta para ajudar sempre que precisar.</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/ End service -->
+
+	<!-- Pricing Table -->
+	<section class="pricing-table section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title">
+						<h2>Escolha o plano ideal para o seu negócio</h2>
+						<img src="/assets/img/section-img.png" alt="#">
+						<p>Descubra os benefícios de cada plano e leve sua gestão para o próximo nível.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Plano Start -->
+				<div class="col-lg-4 col-md-12 col-12">
+					<div class="single-table">
+						<!-- Cabeçalho do Plano -->
+						<div class="table-head">
+							<div class="icon">
+								<i class="icofont-ui-calendar"></i>
+							</div>
+							<h4 class="title">Start</h4>
+							<div class="price">
+								<p class="amount">R$25<span>/ Mês</span></p>
+							</div>
+						</div>
+						<!-- Lista de Funcionalidades -->
+						<ul class="table-list">
+							<li><i class="icofont-ui-check"></i>Principais funcionalidades</li>
+							<li><i class="icofont-ui-check"></i>Gerenciamento de agendas</li>
+							<li class="cross"><i class="icofont-ui-close"></i>Envio de lembretes automáticos</li>
+							<li class="cross"><i class="icofont-ui-close"></i>Funcionalidades avançadas</li>
+						</ul>
+						<div class="table-bottom"></div>
+						<a class="btn" href="#">Assinar Agora</a>
+					</div>
+				</div>
+				<!-- Fim do Plano Start -->
+
+				<!-- Plano Pro -->
+				<div class="col-lg-4 col-md-12 col-12">
+					<div class="single-table">
+						<!-- Cabeçalho do Plano -->
+						<div class="table-head">
+							<div class="icon">
+								<i class="icofont-ui-message"></i>
+							</div>
+							<h4 class="title">Pro</h4>
+							<div class="price">
+								<p class="amount">R$35<span>/ Mês</span></p>
+							</div>
+						</div>
+						<!-- Lista de Funcionalidades -->
+						<ul class="table-list">
+							<li><i class="icofont-ui-check"></i>Inclui tudo do plano Start</li>
+							<li><i class="icofont-ui-check"></i>Envio de lembretes automáticos</li>
+							<li><i class="icofont-ui-check"></i>Relatórios básicos</li>
+							<li class="cross"><i class="icofont-ui-close"></i>Funcionalidades avançadas</li>
+						</ul>
+						<div class="table-bottom">
+							<a class="btn" href="#">Assinar Agora</a>
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Plano Pro -->
+
+				<!-- Plano Plus -->
+				<div class="col-lg-4 col-md-12 col-12">
+					<div class="single-table">
+						<!-- Cabeçalho do Plano -->
+						<div class="table-head">
+							<div class="icon">
+								<i class="icofont-rocket"></i>
+							</div>
+							<h4 class="title">Plus</h4>
+							<div class="price">
+								<p class="amount">R$99<span>/ Mês</span></p>
+							</div>
+						</div>
+						<!-- Lista de Funcionalidades -->
+						<ul class="table-list">
+							<li><i class="icofont-ui-check"></i>Inclui tudo do plano Start e Pro</li>
+							<li><i class="icofont-ui-check"></i>Funcionalidades avançadas</li>
+							<li><i class="icofont-ui-check"></i>Relatórios detalhados</li>
+							<li><i class="icofont-ui-check"></i>Suporte prioritário</li>
+						</ul>
+						<div class="table-bottom">
+							<a class="btn" href="#">Assinar Agora</a>
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Plano Plus -->
+			</div>
+		</div>
+	</section>
+	<!--/ End Pricing Table -->
+
+
+	<!-- Footer Area -->
+	<footer id="footer" class="footer ">
+		<!-- Footer Top -->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-footer">
+							<h2>About Us</h2>
+							<p>Lorem ipsum dolor sit am consectetur adipisicing elit do eiusmod tempor incididunt ut
+								labore dolore magna.</p>
+							<!-- Social -->
+							<ul class="social">
+								<li><a href="#"><i class="icofont-facebook"></i></a></li>
+								<li><a href="#"><i class="icofont-google-plus"></i></a></li>
+								<li><a href="#"><i class="icofont-twitter"></i></a></li>
+								<li><a href="#"><i class="icofont-vimeo"></i></a></li>
+								<li><a href="#"><i class="icofont-pinterest"></i></a></li>
+							</ul>
+							<!-- End Social -->
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-footer f-link">
+							<h2>Quick Links</h2>
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-12">
+									<ul>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a>
+										</li>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a>
+										</li>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a>
+										</li>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our
+												Cases</a></li>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other
+												Links</a></li>
+									</ul>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<ul>
+										<li><a href="#"><i class="fa fa-caret-right"
+													aria-hidden="true"></i>Consuling</a></li>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a>
+										</li>
+										<li><a href="#"><i class="fa fa-caret-right"
+													aria-hidden="true"></i>Testimonials</a></li>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+										<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact
+												Us</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-footer">
+							<h2>Open Hours</h2>
+							<p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+							<ul class="time-sidual">
+								<li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
+								<li class="day">Saturday <span>9.00-18.30</span></li>
+								<li class="day">Monday - Thusday <span>9.00-15.00</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-footer">
+							<h2>Newsletter</h2>
+							<p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit
+								amet, consectetur adipisicing elit,</p>
+							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+								<input name="email" placeholder="Email Address" class="common-input"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'"
+									required="" type="email">
+								<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Footer Top -->
+		<!-- Copyright -->
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="copyright-content">
+							<p>© Copyright 2018 | All Rights Reserved by <a href="https://www.wpthemesgrid.com"
+									target="_blank">wpthemesgrid.com</a> </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Copyright -->
+	</footer>
+	<!--/ End Footer Area -->
+
+</body>
+
+</html>

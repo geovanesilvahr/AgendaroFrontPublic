@@ -1,0 +1,139 @@
+{% load static %}
+{% include 'business/business_page.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Agendamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(15px);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #007bff, #00d4ff);
+            border: none;
+            padding: 12px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #0056b3, #0088cc);
+            transform: scale(1.05);
+        }
+
+        .input-group-text {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #fff;
+        }
+
+        select,
+        input {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        select option {
+            color: black;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.5);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            background: -webkit-linear-gradient(left, #00d4ff, #007bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Criar Agenda</h1>
+
+        <!-- Exibir mensagens -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Título da Agenda</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                    <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Descrição</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-justify"></i></span>
+                    <textarea class="form-control" id="description" name="description" required></textarea>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="service" class="form-label">Serviço</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-scissors"></i></span>
+                    <select class="form-select" id="service" name="service" required>
+                        {% for service in services %}
+                        <option value="{{ service.id }}">{{ service.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Salvar</button>
+        </form>
+    </div>
+</body>
+
+</html>

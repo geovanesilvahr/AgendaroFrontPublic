@@ -1,0 +1,71 @@
+{% load static %}
+
+{% include 'business/business_page.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h3 class="mb-2">Gerenciar Serviços</h3>
+    <a>Gerencie seus serviços prestados e depois vincule a uma agenda!</a>
+    <div class="row">
+        <!-- Formulário de Cadastro -->
+        <div class="col-md-6">
+            <div class="card p-4 shadow">
+                <h4 class="mb-3">Cadastrar Novo Serviço</h4>
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label class="form-label">Nome do Serviço</label>
+                        {{ form.title }}
+                        <div class="text-danger">{{ form.title.errors }}</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Descrição</label>
+                        {{ form.description }}
+                        <div class="text-danger">{{ form.description.errors }}</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Preço</label>
+                        {{ form.price }}
+                        <div class="text-danger">{{ form.price.errors }}</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Empresa</label>
+                        {{ form.business }}
+                        <div class="text-danger">{{ form.business.errors }}</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Lista de Serviços -->
+        <div class="col-md-6">
+            <div class="card p-4 shadow">
+                <h4 class="mb-3">Serviços Cadastrados</h4>
+                <ul class="list-group">
+                    {% for servico in servicos %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>{{ servico.title }}</strong> - R$ {{ servico.price }}
+                                <br>
+                                <small>{{ servico.description }}</small>
+                            </div>
+                            <form action="{% url 'business:delete_service' servico.id %}" method="POST" style="display:inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
+                            </form>
+                        </li>
+                    {% empty %}
+                        <li class="list-group-item">Nenhum serviço cadastrado.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
